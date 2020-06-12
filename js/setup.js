@@ -9,9 +9,6 @@ var WIZARD_FIREBALL_COLORS = ['#ee4830', '#30a8ee', '#5ce6c0', '#e848d5', '#e6e8
 var MIN_NAME_LENGTH = 2;
 var MAX_NAME_LENGTH = 25;
 
-var setup = document.querySelector('.setup');
-setup.classList.remove('hidden');
-
 var getRandomValue = function (values) {
   return values[Math.floor(Math.random() * values.length)];
 };
@@ -64,6 +61,7 @@ var similarCharacters = document.querySelector('.setup-similar');
 similarCharacters.classList.remove('hidden');
 
 var setupOpen = document.querySelector('.setup-open');
+var setup = document.querySelector('.setup');
 var setupClose = setup.querySelector('.setup-close');
 var setupOpenIcon = setupOpen.querySelector('.setup-open-icon');
 var setupUserName = setup.querySelector('.setup-user-name');
