@@ -10,6 +10,21 @@ window.constants = (function () {
   var MIN_NAME_LENGTH = 2;
   var MAX_NAME_LENGTH = 25;
 
+  var URL_LOAD = 'https://javascript.pages.academy/code-and-magick/data';
+  var URL_SAVE = 'https://javascript.pages.academy/code-and-magick';
+  var TIMEOUT_IN_MS = 10000;
+
+  var NODE = {
+    general: 'z-index: 100; margin: 0 auto; text-align: center; background-color: white;',
+    position: 'absolute',
+    left: '0',
+    right: '0',
+    top: '50%',
+    width: '50%',
+    fontSize: '30px',
+    color: 'red'
+  };
+
   return {
     SIMILAR_CHARACTERS_COUNT: SIMILAR_CHARACTERS_COUNT,
     WIZARD_NAMES: WIZARD_NAMES,
@@ -18,6 +33,10 @@ window.constants = (function () {
     WIZARD_EYES_COLORS: WIZARD_EYES_COLORS,
     WIZARD_FIREBALL_COLORS: WIZARD_FIREBALL_COLORS,
     MIN_NAME_LENGTH: MIN_NAME_LENGTH,
-    MAX_NAME_LENGTH: MAX_NAME_LENGTH
+    MAX_NAME_LENGTH: MAX_NAME_LENGTH,
+    URL_LOAD: URL_LOAD,
+    URL_SAVE: URL_SAVE,
+    TIMEOUT_IN_MS: TIMEOUT_IN_MS,
+    NODE: NODE
   };
 })();
