@@ -17,7 +17,7 @@
   var createDomBlock = function (count, template, characters, blockLocation) {
     var fragment = document.createDocumentFragment();
     for (var i = 0; i < count; i++) {
-      var blockElement = createWizardElement(template, characters[i]);
+      var blockElement = createWizardElement(template, window.getRandomValue(characters));
 
       fragment.appendChild(blockElement);
     }
@@ -31,5 +31,5 @@
     similarCharacters.classList.remove('hidden');
   };
 
-  window.backend.load(onLoad, window.onError);
+  window.connectingServer('GET', window.constants.URL_LOAD, null, onLoad, window.onError);
 })();
