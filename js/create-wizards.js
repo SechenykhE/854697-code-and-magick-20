@@ -31,5 +31,5 @@
     similarCharacters.classList.remove('hidden');
   };
 
-  window.connectingServer('GET', window.constants.URL_LOAD, null, onLoad, window.onError);
+  window.connectingServer('GET', window.constants.URL_LOAD, onLoad, window.onError);
 })();

@@ -2,25 +2,31 @@
 
 window.backend = (function () {
   var TIMEOUT_IN_MS = window.constants.TIMEOUT_IN_MS;
+  var StatusCode = {
+    OK: 200,
+    BAD_REQUEST: 400,
+    UNAUTHORIZED: 401,
+    NOT_FOUND: 404
+  };
 
-  window.connectingServer = function (method, url, data, onLoad, onError) {
+  window.connectingServer = function (method, url, onLoad, onError, data) {
     var xhr = new XMLHttpRequest();
     xhr.responseType = 'json';
 
     xhr.addEventListener('load', function () {
       var error;
       switch (xhr.status) {
-        case 200:
+        case StatusCode.OK:
           onLoad(xhr.response);
           break;
 
-        case 400:
+        case StatusCode.BAD_REQUEST:
           error = 'Неверный запрос';
           break;
-        case 401:
+        case StatusCode.UNAUTHORIZED:
           error = 'Пользователь не авторизован';
           break;
-        case 404:
+        case StatusCode.NOT_FOUND:
           error = 'Ничего не найдено';
           break;
 

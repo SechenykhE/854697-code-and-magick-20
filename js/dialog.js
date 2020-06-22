@@ -83,8 +83,8 @@
   var form = setup.querySelector('.setup-wizard-form');
   form.addEventListener('submit', function (evt) {
     evt.preventDefault();
-    window.connectingServer('POST', window.constants.URL_SAVE, new FormData(form), function () {
+    window.connectingServer('POST', window.constants.URL_SAVE, function () {
       setup.classList.add('hidden');
-    }, window.onError);
+    }, window.onError, new FormData(form));
   });
 })();
