@@ -26,6 +26,8 @@ window.constants = (function () {
     color: 'red'
   };
 
+  var FILE_TYPES = ['gif', 'jpg', 'jpeg', 'png'];
+
   return {
     SIMILAR_CHARACTERS_COUNT: SIMILAR_CHARACTERS_COUNT,
     WIZARD_NAMES: WIZARD_NAMES,
@@ -39,6 +41,7 @@ window.constants = (function () {
     URL_SAVE: URL_SAVE,
     TIMEOUT_IN_MS: TIMEOUT_IN_MS,
     DEBOUNCE_INTERVAL: DEBOUNCE_INTERVAL,
-    NODE: NODE
+    NODE: NODE,
+    FILE_TYPES: FILE_TYPES
   };
 })();
